@@ -29,61 +29,47 @@ if (d > 100 || e > 100) {
 
 let a = '2';
 let b = '3';
-a = Number(a);
-b = Number(b);
-alert(a + b);
+alert(Number(a) + Number(b));
 
 
 
 let monthNumber = prompt('Ведите номер месяца');
 switch (monthNumber) {
     case '1':
-        console.log('Январь');
-        console.log('Зима');
+        console.log('Январь', 'Зима');
         break;
     case '2':
-        console.log('Февраль');
-        console.log('Зима');
+        console.log('Февраль', 'Зима');
         break;
     case '3':
-        console.log('Март');
-        console.log('Весна');
+        console.log('Март', 'Весна');
         break;
     case '4':
-        console.log('Апрель');
-        console.log('Весна');
+        console.log('Апрель', 'Весна');
         break;
     case '5':
-        console.log('Май');
-        console.log('Весна');
+        console.log('Май', 'Весна');
         break;
     case '6':
-        console.log('Июнь');
-        console.log('Лето');
+        console.log('Июнь', 'Лето');
         break;
     case '7':
-        console.log('Июль');
-        console.log('Лето');
+        console.log('Июль', 'Лето');
         break;
     case '8':
-        console.log('Август');
-        console.log('Лето');
+        console.log('Август', 'Лето');
         break;
     case '9':
-        console.log('Сентябрь');
-        console.log('Осень');
+        console.log('Сентябрь', 'Осень');
         break;
     case '10':
-        console.log('Октябрь');
-        console.log('Осень');
+        console.log('Октябрь', 'Осень');
         break;
     case '11':
-        console.log('Ноябрь');
-        console.log('Осень');
+        console.log('Ноябрь', 'Осень');
         break;
     case '12':
-        console.log('Декабрь');
-        console.log('Зима');
+        console.log('Декабрь', 'Зима');
         break;
 
     default:
@@ -93,9 +79,7 @@ switch (monthNumber) {
 
 
 let number = Number(prompt('Пожалуйста, введите любое число'));
-if (typeof number === 'number') {
-    console.log(number);
-}
+console.log(number);
 if (number % 2) {
     alert('Число нечетное');
 } else if (number) {
@@ -105,16 +89,20 @@ if (number % 2) {
 }
 
 
-let clientOS = Number(prompt('Выберите свою операционную систему 0-ios или 1-android'));
-let clientDeviceYear = Number(prompt('укажите год выпуска'));
-if (clientOS === 0 && clientDeviceYear > 2015) {
+let clientOS = confirm('Ваша операционная система Ios')
+if (clientOS === true) {
     console.log('Установите версию приложения для iOS по ссылке');
-} else if (clientOS === 0 && clientDeviceYear < 2015) {
-    console.log('Установите облегченную версию приложения для iOS по ссылке');
-} else if (clientOS > 0 && clientDeviceYear < 2015) {
-    console.log('Установите облегченную версию приложения для Android по ссылке');
-} else if (clientOS > 0 && clientDeviceYear > 2015) {
+} else if (clientOS === false) {
     console.log('Установите версию приложения для Android по ссылке');
-} else {
-    console.log('Вы ввели неверный вариант');
+}
+
+
+
+
+let clientDeviceYear = Number(prompt('укажите год выпуска'));
+if (clientOS === true && clientDeviceYear < 2015) {
+    console.log('Установите облегченую версию приложения для iOS по ссылке');
+}
+else if (clientOS === false && clientDeviceYear < 2015) {
+    console.log('Установите облегченую версию приложения для Android по ссылке');
 }
