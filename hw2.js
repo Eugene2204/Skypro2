@@ -75,6 +75,7 @@ if (number % 2) {
 let clientOS = confirm('Ваша операционная система Ios')
 if (clientOS === true) {
     console.log('Установите версию приложения для iOS по ссылке');
+    
 } else if (clientOS === false) {
     console.log('Установите версию приложения для Android по ссылке');
 }

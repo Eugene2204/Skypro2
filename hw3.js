@@ -46,11 +46,6 @@ console.log(num);
 
 
 
-let friday = 6;
-for (month = 1; month < 31/7; month++) {
-    if (friday) {
-        console.log('Сегодня пятница, ...-е число. Необходимо подготовить отчет.');
+for (let day =6;day <= 31;day+=7) {
+    console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
     }
-}
-
-   
