@@ -36,42 +36,25 @@ alert(Number(a) + Number(b));
 let monthNumber = prompt('Ведите номер месяца');
 switch (monthNumber) {
     case '1':
-        console.log('Январь', 'Зима');
-        break;
     case '2':
-        console.log('Февраль', 'Зима');
+    case '12':
+        console.log('Зима');
         break;
     case '3':
-        console.log('Март', 'Весна');
-        break;
     case '4':
-        console.log('Апрель', 'Весна');
-        break;
     case '5':
-        console.log('Май', 'Весна');
+        console.log('Весна');
         break;
     case '6':
-        console.log('Июнь', 'Лето');
-        break;
     case '7':
-        console.log('Июль', 'Лето');
-        break;
     case '8':
-        console.log('Август', 'Лето');
+        console.log('Лето');
         break;
     case '9':
-        console.log('Сентябрь', 'Осень');
-        break;
     case '10':
-        console.log('Октябрь', 'Осень');
-        break;
     case '11':
-        console.log('Ноябрь', 'Осень');
+        console.log('Осень');
         break;
-    case '12':
-        console.log('Декабрь', 'Зима');
-        break;
-
     default:
         console.log('Такого месяца не существует');
 }
@@ -79,7 +62,7 @@ switch (monthNumber) {
 
 
 let number = Number(prompt('Пожалуйста, введите любое число'));
-console.log(number);
+console.log(isNaN(number));
 if (number % 2) {
     alert('Число нечетное');
 } else if (number) {
@@ -102,7 +85,12 @@ if (clientOS === true) {
 let clientDeviceYear = Number(prompt('укажите год выпуска'));
 if (clientOS === true && clientDeviceYear < 2015) {
     console.log('Установите облегченую версию приложения для iOS по ссылке');
-}
-else if (clientOS === false && clientDeviceYear < 2015) {
+} else if (clientOS === true && clientDeviceYear > 2015) {
+    console.log('Установите версию приложения для iOS по ссылке');
+} else if (clientOS === false && clientDeviceYear < 2015) {
     console.log('Установите облегченую версию приложения для Android по ссылке');
+} else if (clientOS === false && clientDeviceYear > 2015) {
+    console.log('Установите версию приложения для Android по ссылке');
+} else {
+    console.log('Вы ввели неверное значение');
 }
