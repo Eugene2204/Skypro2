@@ -62,7 +62,7 @@ switch (monthNumber) {
 
 
 let number = Number(prompt('Пожалуйста, введите любое число'));
-console.log(isNaN(number));
+alert(number);
 if (number % 2) {
     alert('Число нечетное');
 } else if (number) {
@@ -73,25 +73,15 @@ if (number % 2) {
 
 
 let clientOS = confirm('Ваша операционная система Ios')
-if (clientOS === true) {
-    console.log('Установите версию приложения для iOS по ссылке');
-    
-} else if (clientOS === false) {
-    console.log('Установите версию приложения для Android по ссылке');
-}
-
-
-
-
 let clientDeviceYear = Number(prompt('укажите год выпуска'));
-if (clientOS === true && clientDeviceYear < 2015) {
-    console.log('Установите облегченую версию приложения для iOS по ссылке');
-} else if (clientOS === true && clientDeviceYear > 2015) {
+if (clientOS === true && clientDeviceYear > 2015) {
     console.log('Установите версию приложения для iOS по ссылке');
-} else if (clientOS === false && clientDeviceYear < 2015) {
-    console.log('Установите облегченую версию приложения для Android по ссылке');
+} else if (clientOS === true && clientDeviceYear < 2015) {
+    console.log('Установите облегченую версию приложения для iOS по ссылке')
 } else if (clientOS === false && clientDeviceYear > 2015) {
     console.log('Установите версию приложения для Android по ссылке');
+} else if (clientOS === false && clientDeviceYear < 2015) {
+    console.log('Установите облегченую версию приложения для Android по ссылке');
 } else {
     console.log('Вы ввели неверное значение');
 }
