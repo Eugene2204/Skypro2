@@ -62,7 +62,7 @@ switch (monthNumber) {
 
 
 let number = Number(prompt('Пожалуйста, введите любое число'));
-alert(number);
+alert(!isNaN(number) && isFinite(number))
 if (number % 2) {
     alert('Число нечетное');
 } else if (number) {
@@ -72,16 +72,25 @@ if (number % 2) {
 }
 
 
-let clientOS = confirm('Ваша операционная система Ios')
-let clientDeviceYear = Number(prompt('укажите год выпуска'));
-if (clientOS === true && clientDeviceYear > 2015) {
+let clientOS = Boolean(confirm('Ваша операционная система Ios'));
+if (clientOS) {
     console.log('Установите версию приложения для iOS по ссылке');
-} else if (clientOS === true && clientDeviceYear < 2015) {
-    console.log('Установите облегченую версию приложения для iOS по ссылке')
-} else if (clientOS === false && clientDeviceYear > 2015) {
-    console.log('Установите версию приложения для Android по ссылке');
-} else if (clientOS === false && clientDeviceYear < 2015) {
-    console.log('Установите облегченую версию приложения для Android по ссылке');
 } else {
-    console.log('Вы ввели неверное значение');
+    console.log('Установите версию приложения для Android по ссылке');
 }
+
+
+
+
+let clientDeviceYear = Number(prompt('укажите год выпуска'));
+if (clientOS && clientDeviceYear > 2015) {
+    console.log(`Установите версию приложения для iOS по ссылке`);
+} if (!clientOS && clientDeviceYear > 2015) {
+    console.log('Установите версию приложения для Android по ссылке');
+} else if (!clientOS && clientDeviceYear < 2015) {
+    console.log('Установите облегченую версию приложения для Android по ссылке');
+}else if (clientOS && clientDeviceYear < 2015) {
+    console.log(`Установите облегченую версию приложения для iOS по ссылке`);
+}
+
+

@@ -29,7 +29,7 @@ const obj = {
     Петя: '400',
 }
 for (let key in obj) {
-    document.write(key + ' - зарплата ' + obj[key] + ' долларов' + '<br>');
+    document.write(key + ' - зарплата ' + obj[key] + ' долларов');
     console.log(key + ' - зарплата ' + obj[key] + ' долларов');
     break;
 }
