@@ -18,3 +18,29 @@ console.log(Ios);
 else if (clientOS === true && clientDeviceYear < 2015) {
     
 } 
+alert(!isNaN(number) && isFinite(number))
+
+
+
+
+const user = {
+    name: 'Alex',
+    age: 32,
+    city: 'Saint-Petersburg',
+    getInfo () {
+        return(`Пользователь ${user.name},возраст ${user.age},проживает в городе ${user.city};`);
+    } 
+}
+console.log(user.getInfo());
+
+
+const numberType = (a,b) => {
+    if (a && b === true) {
+        console.log('Одно или оба значения не являются числом');
+    } else if (a && b === false) {
+         console.log(a*b);
+         return
+    } 
+    }
+    
+    numberType(4,6);

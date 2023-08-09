@@ -61,18 +61,19 @@ switch (monthNumber) {
 
 
 
-let number = Number(prompt('Пожалуйста, введите любое число'));
-alert(!isNaN(number) && isFinite(number))
-if (number % 2) {
-    alert('Число нечетное');
-} else if (number) {
+const number = Number(prompt('Пожалуйста, введите любое число'));
+if (isNaN(number % 2)) {
+    alert(number);
+} else if (number % 2 === 0) {
     alert('Число четное');
 } else {
-    alert('Такого числа нет');
+    alert('Число нечетное');
 }
 
 
-let clientOS = Boolean(confirm('Ваша операционная система Ios'));
+
+
+let clientOS = confirm('Ваша операционная система Ios');
 if (clientOS) {
     console.log('Установите версию приложения для iOS по ссылке');
 } else {
@@ -89,7 +90,7 @@ if (clientOS && clientDeviceYear > 2015) {
     console.log('Установите версию приложения для Android по ссылке');
 } else if (!clientOS && clientDeviceYear < 2015) {
     console.log('Установите облегченую версию приложения для Android по ссылке');
-}else if (clientOS && clientDeviceYear < 2015) {
+} else if (clientOS && clientDeviceYear < 2015) {
     console.log(`Установите облегченую версию приложения для iOS по ссылке`);
 }
 
