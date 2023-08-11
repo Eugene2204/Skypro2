@@ -61,37 +61,35 @@ switch (monthNumber) {
 
 
 
-const number = Number(prompt('Пожалуйста, введите любое число'));
-if (isNaN(number % 2)) {
-    alert(number);
-} else if (number % 2 === 0) {
-    alert('Число четное');
-} else {
-    alert('Число нечетное');
+const userNumber = Number(prompt('Пожалуйста, введите любое число'));
+if (isNaN(userNumber)) {
+    alert(`Вы ввели не число`);
+}  else {
+    userNumber % 2 ? alert('Число нечетное') : alert('Число четное');
 }
 
 
 
 
-let clientOS = confirm('Ваша операционная система Ios');
-if (clientOS) {
-    console.log('Установите версию приложения для iOS по ссылке');
-} else {
-    console.log('Установите версию приложения для Android по ссылке');
+let clientOS = Number(prompt('Ваша операционная система Ios введите 0 , android 1'));
+if (clientOS === 0) {
+    console.log(`Установите версию приложения для Ios по ссылке`);
+}  else if (clientOS === 1) {
+    console.log(`Установите версию приложения для Android по ссылке`);
 }
 
-
-
-
-let clientDeviceYear = Number(prompt('укажите год выпуска'));
-if (clientOS && clientDeviceYear > 2015) {
+let clientDeviceYear = Number(prompt('Ваш год выпуска меньше 2015 года выпуска введите 0 ,больше 1'));
+if (clientDeviceYear === 0 && clientDeviceYear === 1) {
     console.log(`Установите версию приложения для iOS по ссылке`);
-} if (!clientOS && clientDeviceYear > 2015) {
+} if (clientOS === 1 && clientDeviceYear === 1) {
     console.log('Установите версию приложения для Android по ссылке');
-} else if (!clientOS && clientDeviceYear < 2015) {
-    console.log('Установите облегченую версию приложения для Android по ссылке');
-} else if (clientOS && clientDeviceYear < 2015) {
-    console.log(`Установите облегченую версию приложения для iOS по ссылке`);
-}
+} else if  (clientOS === 1 && clientDeviceYear === 0) {
+    console.log('Установите облегченую версию приложения для Android по ссылке')
+} else if (clientOS === 0 && clientDeviceYear === 0) {
+    console.log(`Установите облегченую версию приложения для iOS по ссылке`)
+} 
+ 
+
+
 
 

@@ -44,3 +44,6 @@ const numberType = (a,b) => {
     }
     
     numberType(4,6);
+
+
+    

@@ -12,6 +12,7 @@ console.log(min(6, 6));
 
 function determineParity() {
     let number = Number(prompt('введите число'));
+    
     if (number % 2 === 0) {
         alert("Число четное");
     } else {
@@ -57,25 +58,28 @@ console.log(getUserAge());
 
 // задача 5
 
-const numberType = (a, b) => {
-    let mult = a * b;
-    if (isNaN(a, b)) {
-        return console.log(mult);
-    } else {
+const numberType = () => {
+const firstNumber = Number(prompt(1));
+const secondNumber = Number(prompt(2));
+
+    if (isNaN(firstNumber && secondNumber)) {
         console.log('Одно или оба значения не являются числом');
+    } else {
+       console.log(firstNumber * secondNumber);
     }
 }
-numberType(4, 2);
+numberType();
 
 // задача 6
 
 
 function askNumber() {
-    const num = Number(prompt(`Введите число`));
-    if (num * num) {
-        console.log(`n в кубе равняется ${num}`);
+    const userNumber = Number(prompt(`Введите число`));
+    
+    if (isNaN(userNumber)) {
+        return console.log(`Переданный параметр не является числом`);
     } else {
-        return console.log(`Переданный параметр не является числом`)
+        return console.log(`n в кубе равняется ${userNumber * userNumber}`)
     }
 }
 askNumber();
