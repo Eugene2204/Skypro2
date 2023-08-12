@@ -10,17 +10,17 @@ console.log(min(6, 6));
 
 // задача 2
 
-function determineParity() {
-    let number = Number(prompt('введите число'));
-    
-    if (number % 2 === 0) {
+function determineParity(a) {
+
+    if (a % 2 === 0) {
         alert("Число четное");
     } else {
         alert("Число нечетное");
     }
 }
 
-determineParity();
+determineParity(2);
+determineParity(3);
 
 
 // задача 3.1
@@ -44,7 +44,9 @@ console.log(squareNumber(2));
 
 function getUserAge() {
     let age = Number(prompt('Сколько вам лет?'));
-    if (age <= 0) {
+    if (isNaN(age)) {
+        return ('не число');
+    } else if (age <= 0) {
         return ('Вы ввели неправильное значение');
     } else if (age <= 12) {
         return ('Привет, друг!');
@@ -58,28 +60,28 @@ console.log(getUserAge());
 
 // задача 5
 
-const numberType = () => {
-const firstNumber = Number(prompt(1));
-const secondNumber = Number(prompt(2));
+const numberType = (a, b) => {
 
-    if (isNaN(firstNumber && secondNumber)) {
-        console.log('Одно или оба значения не являются числом');
+    if (isNaN(Number(a)) || isNaN(Number(b))) {
+        return ('Одно или оба значения не являются числом');
     } else {
-       console.log(firstNumber * secondNumber);
+        return (a * b);
     }
 }
-numberType();
+console.log(numberType(2, 5));
+console.log(numberType(NaN, NaN));
+
 
 // задача 6
 
 
 function askNumber() {
     const userNumber = Number(prompt(`Введите число`));
-    
+
     if (isNaN(userNumber)) {
         return console.log(`Переданный параметр не является числом`);
     } else {
-        return console.log(`n в кубе равняется ${userNumber * userNumber}`)
+        return console.log(`${userNumber} в кубе равняется ${userNumber ** 3}`);
     }
 }
 askNumber();
@@ -87,16 +89,15 @@ askNumber();
 // задача 7
 
 function getCircleArea() {
-    return this.pi * this.radius * this.radius;
+    return Math.PI * this.radius * this.radius;
 }
 
 function getCirclePerimeter() {
-    return this.pi * 2 * this.radius;
+    return Math.PI * 2 * this.radius;
 }
 
 const circle1 = {
     radius: 10,
-    pi: 3.14,
 
     getArea: getCircleArea,
     getPerimeter: getCirclePerimeter,
@@ -104,15 +105,14 @@ const circle1 = {
 
 const circle2 = {
     radius: 20,
-    pi: 3.14,
 
     getArea: getCircleArea,
     getPerimeter: getCirclePerimeter,
 };
 
-console.log(circle1.getArea());
+console.log(Math.floor(circle1.getArea()));
 console.log(Math.floor(circle1.getPerimeter()));
-console.log(circle2.getArea());
+console.log(Math.floor(circle2.getArea()));
 console.log(Math.floor(circle2.getPerimeter()));
 
 
