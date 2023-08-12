@@ -71,23 +71,9 @@ if (isNaN(userNumber)) {
 
 
 
-let clientOS = Number(prompt('Ваша операционная система Ios введите 0 , android 1'));
-if (clientOS === 0) {
-    console.log(`Установите версию приложения для Ios по ссылке`);
-}  else if (clientOS === 1) {
-    console.log(`Установите версию приложения для Android по ссылке`);
-}
-
-let clientDeviceYear = Number(prompt('Ваш год выпуска меньше 2015 года выпуска введите 0 ,больше 1'));
-if (clientDeviceYear === 0 && clientDeviceYear === 1) {
-    console.log(`Установите версию приложения для iOS по ссылке`);
-} if (clientOS === 1 && clientDeviceYear === 1) {
-    console.log('Установите версию приложения для Android по ссылке');
-} else if  (clientOS === 1 && clientDeviceYear === 0) {
-    console.log('Установите облегченую версию приложения для Android по ссылке')
-} else if (clientOS === 0 && clientDeviceYear === 0) {
-    console.log(`Установите облегченую версию приложения для iOS по ссылке`)
-} 
+const clientOS = Number(prompt('Ваша операционная система Ios введите 0 , android 1'));
+const clientDeviceYear = Number(prompt('Укажите год выпуска вашего телефона'));
+console.log(`Установите ${clientDeviceYear < 2015 ? `облегченую` : ``} версию приложения для ${clientOS ? `Android` : `iOS`} по ссылке`);
  
 
 
