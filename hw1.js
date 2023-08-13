@@ -9,15 +9,15 @@ alert(creationIphone);
 let creatorJavascript = 'Брендан Эйх';
 alert(creatorJavascript);
 
-let numberTen = 10;
-let numberTwo = 2;
-let sum = numberTen + numberTwo;
+let firstNumber = 10;
+let secondNumber = 2;
+let sum = firstNumber + secondNumber;
 result = alert(sum);
-let difference = numberTen - numberTwo;
+let difference = firstNumber - secondNumber;
 result = alert(difference);
-let multiply = numberTen * numberTwo;
+let multiply = firstNumber * secondNumber;
 result = alert(multiply);
-let divide = numberTen / numberTwo;
+let divide = firstNumber / secondNumber;
 result = alert(divide);
 
 let exponentiation = 2 ** 5;
@@ -43,14 +43,18 @@ const user = {
     name: 'Alex',
     age: 25,
     isAdmin: true,
-    "city of residence": 'Saint-Petersburg',
 }
 console.log(user.name);
 console.log(user.age);
 console.log(user.isAdmin);
+
+user["city of residence"] = 'Saint-Petersburg';
 console.log(user["city of residence"]);
+
 user.age = "32";
+
 delete user["city of residence"];
+
 let info = prompt("Какую информацию хотите узнать о пользователе?", "name");
 console.log(user[info]);
 alert(user[info]);

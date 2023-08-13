@@ -1,0 +1,104 @@
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    height: 735px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__titel {
+    width: 343px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 238px;
+  }
+  .header__text {
+    width: 343px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px;
+    padding-top: 32px;
+  }
+  .header__link {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .header-button {
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav {
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .nav__link {
+    width: 84px;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 30px;
+    left: 14px;
+  }
+  .nav__box-link_img {
+    width: 343px;
+    height: 300px;
+  }
+  .section {
+    display: flex;
+    gap: 64px;
+    flex-direction: column;
+    align-content: center;
+  }
+  .section__box-games1 {
+    align-items: center;
+    margin-top: 53px;
+  }
+  .section-box__titel {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .section-box__text {
+    width: 343px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px;
+  }
+  .section__undraw_img {
+    width: 344px;
+    margin-top: 0;
+    margin-bottom: 85px;
+  }
+  .footer__text {
+    padding-top: 35px;
+  }
+}/*# sourceMappingURL=mobile.css.map */
