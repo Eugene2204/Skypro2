@@ -43,10 +43,10 @@ console.log(squareNumber(2));
 // задача 4
 
 function getUserAge() {
-    let age = Number(prompt('Сколько вам лет?'));
-    if (isNaN(age)) {
+    let age = prompt('Сколько вам лет?');
+    if (isNaN(age) || age === "" || age === null || age ===" ") {
         return ('не число');
-    } else if (age <= 0) {
+    } else if (age < 0) {
         return ('Вы ввели неправильное значение');
     } else if (age <= 12) {
         return ('Привет, друг!');
@@ -76,14 +76,15 @@ console.log(numberType(NaN, NaN));
 
 
 function askNumber() {
-    const userNumber = Number(prompt(`Введите число`));
+    const userNumber = prompt('Введите число');
 
-    if (isNaN(userNumber)) {
-        return console.log(`Переданный параметр не является числом`);
+    if (isNaN(userNumber) || userNumber === "" || userNumber === " " || userNumber === null) {
+         console.log('Переданный параметр не является числом');
     } else {
-        return console.log(`${userNumber} в кубе равняется ${userNumber ** 3}`);
+         console.log(`${userNumber} в кубе равняется ${userNumber ** 3}`);
     }
 }
+
 askNumber();
 
 // задача 7
