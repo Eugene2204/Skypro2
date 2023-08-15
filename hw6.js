@@ -21,12 +21,13 @@ console.log(result);
 
 //  Задача 4
 
-const multArray = [
-    [1, 1, 1],
-    [1, 1, 1],
-    [1, 1, 1]
-]
-
+const multArray = []
+for (let i = 0; i < 3; i++) {
+    multArray[i] = [];
+    for (let j = 0; j < 3; j++) {
+        multArray[i].push(1);
+    }
+}
 console.log(multArray);
 
 // Задача 5
