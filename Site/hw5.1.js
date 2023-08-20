@@ -26,7 +26,11 @@ function guessWord() {
 
     for (let i = 0; i < fruits.length; i++) {
 
-        if (fruits[0].toUpperCase().includes(firstElem.toUpperCase()) && fruits[fruits.length - 1].toUpperCase().includes(lastElem.toUpperCase())) {
+        if (firstElem === "" || firstElem === " " || firstElem === null) {
+            alert('Не верный первый элемент');
+        } else if (lastElem === "" || lastElem === " " || lastElem === null) {
+            alert('Не верный последний элемент');
+        } else if (fruits[0].toUpperCase().includes(firstElem.toUpperCase()) && fruits[fruits.length - 1].toUpperCase().includes(lastElem.toUpperCase())) {
             alert('Молодец поздравляю с победой!');
         } else if (fruits[0].toUpperCase().includes(firstElem.toUpperCase()) || fruits[fruits.length - 1].toUpperCase().includes(lastElem.toUpperCase())) {
             alert('Вы были близки к победе!');

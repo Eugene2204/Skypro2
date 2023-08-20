@@ -1,6 +1,6 @@
 // Задача 1
-
-console.log("js".toUpperCase());
+let upperValue = "js";
+console.log(upperValue.toUpperCase());
 
 // Задача 2
 
@@ -39,13 +39,13 @@ console.log(showRandomNumber());
 
 // Задача 6
 
-function getRandomArrNumbers(length) {
-    return Array.from(Array(length), () => Math.floor(Math.random(getRandomArrNumbers) * length));
+let getRandomArrNumbers = (num) => {
+    return  Array.from(Array(num), () => Math.floor(Math.random() * num));
 }
 
-console.log(getRandomArrNumbers(Math.floor(7 / 2)));
-console.log(getRandomArrNumbers(Math.floor(12 / 2)));
-console.log(getRandomArrNumbers(Math.floor(15 / 2)));
+console.log(getRandomArrNumbers(7));
+console.log(getRandomArrNumbers(12));
+console.log(getRandomArrNumbers(15));
 
 // Задача 7
 
@@ -55,8 +55,8 @@ console.log(integers(2, 6));
 // Задача 8
 
 const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+    "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 
 let myDate = new Date();
 let fullDate = "Сегодня: " + myDate.getDate() + " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + " - " + days[myDate.getDay()];
