@@ -71,3 +71,15 @@ function each(arr, cb) {
 }
 
 each(["Глеб", "Олег", "Татьяна", "Платон"], log);
+
+const stringArray = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+
+const search = 'ко';
+const result = [];
+stringArray.forEach((stringArray) => {
+
+    if (stringArray.toLowerCase().includes(search.toLowerCase())) {
+        result.push(stringArray);
+    }
+});
+console.log(result);

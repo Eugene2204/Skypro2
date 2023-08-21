@@ -4,17 +4,19 @@ console.log(upperValue.toUpperCase());
 
 // Задача 2
 
-const stringArray = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+ function searchStart(arr)  {
+    const result = [];
+    stringArray.forEach((stringArray) => {
 
-const search = 'ко';
-const result = [];
-stringArray.forEach((stringArray) => {
+        if (stringArray.toLowerCase().includes(arr.toLowerCase())) {
+            result.push(stringArray);
+        }
+    });
+}
 
-    if (stringArray.toLowerCase().includes(search.toLowerCase())) {
-        result.push(stringArray);
-    }
-});
-console.log(result);
+ searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); // ['кошка', 'комар']
+ searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'); // ['груша']
+ searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'); // []
 
 // Задача 3
 
@@ -94,3 +96,5 @@ console.log(formatDate(myDate));
 // Задача 11
 
 //  Находится в папке Site/hw5.1.js
+
+

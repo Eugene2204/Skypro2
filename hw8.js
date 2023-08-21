@@ -11,19 +11,14 @@ console.log(people.sort((a, b) => a.age - b.age));
 
 // Задача 2
 
-function isPositive(number) {
-  if (number > 0) {
-    return true;
-  } else {
-    return false;
-  }
+function isPositive(arrayElement) {
+  if (arrayElement > 0) 
+  return true;
 }
-function isMale(gender) {
-  if (gender === 'male') {
-    return true
-  } else {
-    return false
-  }
+function isMale(arrayElement) {
+  if (arrayElement === 'male') 
+    return true;
+  
 }
 function filter(arr, ruleFunction) {
   let output = [];
@@ -57,13 +52,13 @@ console.log(filter(peopleUser, isMale));
 // Задача 3
 
  let myDate = new Date;
- let interval = setInterval(() => console.log(myDate), 3000);
+ let interval = setInterval(() => console.log(new Date), 3000);
  setTimeout(() => {clearInterval(interval); console.log('30 секунд прошло')}, 30000);
 
 // Задача 4
 
 function delayForSecond(callback) {
-   setTimeout((callback), 1000);
+   setTimeout(callback, 1000);
  }
 
  delayForSecond(function () {
@@ -84,4 +79,4 @@ function sayHi(name) {
   console.log(`Привет, ${name}!`);
 }
 
-delayForSecond(((cb) => sayHi('Глеб') + cb));
+delayForSecond((callback) => sayHi('Глеб') + callback);
