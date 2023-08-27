@@ -1,12 +1,128 @@
-// const user = {
-//     name: 'Alex',
-//     age: 32,
-//     city: 'Saint-Petersburg',
-//     getInfo () {
-//         return(`Пользователь ${user.name},возраст ${user.age},проживает в городе ${user.city};`);
-//     } 
-// }
-// console.log(user.getInfo());
+
+
+function removeExclamationMarks(s) {
+  
+let del = s.replace(/[^\w\s]/gi, '') 
+  return del
+}
+
+console.log(removeExclamationMarks("Hello World!"))
+
+function grow(x){
+let mult = x.reduce((mult, item) => mult * item);
+return mult;
+}
+
+console.log(grow([1, 2, 3, 4]))
+
+function powersOfTwo(n) {
+  const arr = [];
+for (let i = 0; i <= n; i++) {
+arr.push(Math.pow(n, i))
+}
+return arr;
+}
+
+console.log(powersOfTwo(1));
+
+function invert(array) {
+  return array.map(i => -i > 0 || i !== 0 ? - i : i);
+}
+
+console.log(invert([1,-2,3,-4,5]));
+
+function mango(quantity, price) {
+  let sharePrice = price * (quantity - Math.floor(quantity / 3));
+  return sharePrice;
+}
+console.log(mango(5, 3));
+
+function addLength(str) {
+  let result = str.split(' ').map((str) => str + (' ') + str.length);
+  return result;
+  }
+
+  console.log(addLength("apple ban"));
+
+function solution(str){
+let flipWord = str.split('').reverse().join('');
+return flipWord;
+}
+
+console.log(solution('world'));
+
+function nearstSq(n) {
+  let lowerThreshold = nearstLow(n);
+  let upperThreshold = nearstHigh(n);
+
+  return n - lowerThreshold < upperThreshold - n ? lowerThreshold : upperThreshold;
+}
+
+function nearstHigh(n) {
+  if (Math.sqrt(n) % 1 === 0) {
+    return n;
+  }
+
+  return nearstHigh(++n);
+}
+
+function nearstLow(n) {
+  if (Math.sqrt(n) % 1 === 0) {
+    return n;
+  }
+
+  return nearstLow(--n);
+}
+
+console.log(nearstSq(144));
+
+/*function squareSum(numbers) {
+
+let square = numbers.map((num) => num * num);
+let sum = square.reduce((sum, item) => sum + item,0);
+return sum;
+}
+
+console.log(squareSum([1, 2, 2]));
+
+function strCount(str, letter) {
+
+  let result = str.split('').filter((str) => str === letter).length;
+  
+  return result ;  
+}
+
+console.log(strCount("Hello", "o"));
+console.log(strCount("Hello", "l"));
+console.log(strCount("", "z"));
+
+
+function summation(num) {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  return Math.floor(sum);
+}
+
+console.log(summation(Math.abs(-2)));
+
+const litres = (time) => {
+  return Math.floor(time / 2);
+}
+console.log(litres(3));
+console.log(litres(6.7));
+console.log(litres(11.8));
+
+const user = {
+     name: 'Alex',
+     age: 32,
+     city: 'Saint-Petersburg',
+     getInfo () {
+         return(`Пользователь ${user.name},возраст ${user.age},проживает в городе ${user.city};`);
+     } 
+ }
+ console.log(user.getInfo());
 
 
 function getString(arr) {
@@ -83,3 +199,12 @@ stringArray.forEach((stringArray) => {
     }
 });
 console.log(result);
+
+Array.from(Array(num) , () => Math.floor(Math.random() * num));
+
+let originalArray = [1, 2, 3, 4, 5, 6];
+
+let filteredArray = originalArray.filter((elem) => elem < 3 || elem > 4);
+
+console.log(filteredArray)
+*/

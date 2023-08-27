@@ -11,12 +11,12 @@ console.log(people.sort((a, b) => a.age - b.age));
 
 // Задача 2
 
-function isPositive(arrayElement) {
-  if (arrayElement > 0) 
+function isPositive(filter) {
+  if (filter > 0) 
   return true;
 }
-function isMale(arrayElement) {
-  if (arrayElement === 'male') 
+function isMale(filter) {
+  if (filter.gender === 'male') 
     return true;
   
 }
@@ -24,17 +24,12 @@ function filter(arr, ruleFunction) {
   let output = [];
 
   for (let i = 0; i < arr.length; i++) {
-
-    if (ruleFunction(arr[i].gender)) {
-      output.push(arr[i]);
-    } else if (ruleFunction(arr[i])) {
-      output.push(arr[i]);
-    }
+if (ruleFunction(arr[i])) {
+  output.push(arr[i]);  
+}
   }
-
   return output;
 }
-
 
 console.log(filter([3, -4, 1, 9], isPositive)); // Должен выводить [3, 1, 9]
 
@@ -47,7 +42,7 @@ const peopleUser = [
 
 console.log(filter(peopleUser, isMale));
 
-// Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
+// Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}] 
 
 // Задача 3
 
@@ -79,4 +74,4 @@ function sayHi(name) {
   console.log(`Привет, ${name}!`);
 }
 
-delayForSecond((callback) => sayHi('Глеб') + callback);
+delayForSecond(() => sayHi('Глеб')); 

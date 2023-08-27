@@ -15,7 +15,8 @@ function whatSeason() {
     }
 }
 
-// Задача 10 ДЗ 2.7
+// Задача 11 ДЗ 2.7
+
 function guessWord() {
     let fruits = [' Яблоко ', ' Груша ', ' Дыня ', ' Виноград ', ' Персик ', ' Апельсин ', ' Мандарин '];
     fruits = fruits.sort(() => Math.random() - 0.5);

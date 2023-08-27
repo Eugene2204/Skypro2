@@ -2,21 +2,17 @@
 let upperValue = "js";
 console.log(upperValue.toUpperCase());
 
-// Задача 2
+//  Задача 2
 
- function searchStart(arr)  {
-    const result = [];
-    stringArray.forEach((stringArray) => {
+  function searchStart(arr, start)  {
+    const string = start.toLowerCase();
+    return  arr.filter((str) => str.toLowerCase().startsWith(string));
+    
+ }
 
-        if (stringArray.toLowerCase().includes(arr.toLowerCase())) {
-            result.push(stringArray);
-        }
-    });
-}
-
- searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); // ['кошка', 'комар']
- searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'); // ['груша']
- searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'); // []
+console.log(searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко')); // ['кошка', 'комар']
+console.log(searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру')); // ['груша']
+console.log(searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино')); // []
 
 // Задача 3
 
@@ -42,7 +38,11 @@ console.log(showRandomNumber());
 // Задача 6
 
 let getRandomArrNumbers = (num) => {
-    return  Array.from(Array(num), () => Math.floor(Math.random() * num));
+    let arr = [];
+     for (let i = 0; i < Math.floor(num / 2); i++) {
+        arr.push(Math.floor(Math.random() * (num + 1)));
+     }
+     return arr;
 }
 
 console.log(getRandomArrNumbers(7));
