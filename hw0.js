@@ -1,4 +1,11 @@
+let customString = 'abcdef';
+let arrayString = [... customString].reverse().join('');
+console.log(arrayString);
 
+
+let num = [1, 2, 3, 4, 5, 6]
+let arrNum = num.filter((el) => el < 3 || el > 4);
+console.log(arrNum);
 
 function removeExclamationMarks(s) {
   

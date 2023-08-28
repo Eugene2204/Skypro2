@@ -60,8 +60,8 @@ const days = ["Воскресенье", "Понедельник", "Вторни�
 const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
     "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 
-let myDate = new Date();
-let fullDate = "Сегодня: " + myDate.getDate() + " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + " - " + days[myDate.getDay()];
+let dateNow = new Date();
+let fullDate = "Сегодня: " + dateNow.getDate() + " " + months[dateNow.getMonth()] + " " + dateNow.getFullYear() + " - " + days[dateNow.getDay()];
 
 console.log(fullDate);
 
@@ -73,18 +73,20 @@ console.log(currentDate);
 
 // Задача 10
 
+let myDate = new Date();
 function formatDate(date) {
+    
     const day = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
     const month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
         "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-
+        
     let second = date.getSeconds();
     if (second < 10) { second = `0` + second }
     let minutes = date.getMinutes();
     if (minutes < 10) { minutes = `0` + minutes }
     let hours = date.getHours();
     if (hours < 10) { hours = `0` + hours }
-
+   
     let dateFormat = "Дата:" + date.getDate() + " " + month[date.getMonth()] + " " + date.getFullYear() + " - это " + day[date.getDay()] + ` Время: ` + `${hours}` + `:${minutes}` + `:${second}`
 
     return dateFormat;

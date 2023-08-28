@@ -53,7 +53,7 @@ guessArrayNumber.includes(userNumber) ? alert(`Угадал`) : alert(`Неуг�
 
 let customString = 'abcdef';
 let arrayString = Array.from(customString);
-arrayString.reverse();
+arrayString.reverse().join()
 console.log(arrayString);
 
 // Задача 9
