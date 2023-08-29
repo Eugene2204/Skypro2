@@ -73,7 +73,7 @@ body {
     }
 
     &-button_submit:hover {
-        cursor: url(img/clarity_cursor-hand-line.svg), pointer;
+        cursor: url(./img/clarity_cursor-hand-line.svg), pointer;
     }
 }
 
@@ -99,7 +99,7 @@ body {
 
     &__box-link_img {
         border-radius: 16px;
-        background: linear-gradient(180deg, rgba(39, 1, 15, 0.00) 0%, #001944 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+        background: linear-gradient(180deg, rgba(39, 1, 15, 0.00) 0%, #001944 100%), lightgray 50% / cover no-repeat;
 
     }
 
