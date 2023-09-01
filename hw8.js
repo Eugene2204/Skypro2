@@ -11,12 +11,12 @@ console.log(people.sort((a, b) => a.age - b.age));
 
 // Задача 2
 
-function isPositive(filter) {
-  if (filter > 0) 
+function isPositive(filter) { 
+  if (filter > 0) //проверка элемента на значения
   return true;
 }
 function isMale(filter) {
-  if (filter.gender === 'male') 
+  if (filter.gender === 'male') //проверка элемента на значения
     return true;
   
 }
@@ -24,8 +24,8 @@ function filter(arr, ruleFunction) {
   let output = [];
 
   for (let i = 0; i < arr.length; i++) {
-if (ruleFunction(arr[i])) {
-  output.push(arr[i]);  
+if (ruleFunction(arr[i])) {  //проверка ruleFunction
+  output.push(arr[i]);  //добавляем элемент,если true или не добавляем,если false 
 }
   }
   return output;

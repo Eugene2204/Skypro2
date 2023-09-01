@@ -4,10 +4,11 @@ console.log(upperValue.toUpperCase());
 
 //  Задача 2
 
-  function searchStart(arr, start)  {
-    const string = start.toLowerCase();
-    return  arr.filter((str) => str.toLowerCase().startsWith(string));
+  function searchStart(arr, start)  {    //создали функцию с двумя аргументами
     
+    const string = start.toLowerCase();  // приводим к нижнему регистру строку
+    return  arr.filter((str) => str.toLowerCase().includes(string)); //к массиву применяем метод filter, применяем toLowerCase чтобы не учитывался регистр и startsWith проверить,есть ли такое значение
+       
  }
 
 console.log(searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко')); // ['кошка', 'комар']
